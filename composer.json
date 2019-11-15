@@ -1,0 +1,39 @@
+{
+    "name": "wenkang/mysqldriver",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wenkang",
+            "email": "1150134832@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.1.3",
+        "ext-json": "*",
+
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "phpstan/phpstan": "^0.11.19"
+    },
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        },
+        "files": [
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+            "test/"
+        ]
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://mirrors.aliyun.com/composer/"
+        }
+    }
+}
