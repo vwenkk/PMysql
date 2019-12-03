@@ -6,13 +6,13 @@
  * Time: 23:23
  */
 
-namespace Src\Exception\Base;
+namespace PMysql\Exception\Base;
 
 use Monolog\Logger;
 
 /**
  * Class ErrorMapBase
- * @package Src\Exception\Base
+ * @package PMysql\Exception\Base
  */
 abstract class ErrorMapBase
 {

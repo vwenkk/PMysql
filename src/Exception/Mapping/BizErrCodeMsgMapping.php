@@ -5,13 +5,13 @@
  * Date: 2019/11/15
  * Time: 23:21
  */
-namespace Src\Exception\Mapping;
+namespace PMysql\Exception\Mapping;
 
-use Src\Exception\Base\ErrorMapBase;
+use PMysql\Exception\Base\ErrorMapBase;
 
 /**
  * Class BizErrCodeMsgMapping
- * @package Src\Exception\Mapping
+ * @package PMysql\Exception\Mapping
  */
 abstract class BizErrCodeMsgMapping extends ErrorMapBase
 {

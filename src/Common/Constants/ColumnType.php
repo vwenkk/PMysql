@@ -5,13 +5,13 @@
  * Date: 2019/11/19
  * Time: 10:58
  */
-namespace Src\Common\Constants;
+namespace PMysql\Common\Constants;
 
 /**
  * mysql field type
  * @see https://dev.mysql.com/doc/internals/en/com-query-response.html#column-type
  * Class ColumnType
- * @package Src\Common\Constants
+ * @package PMysql\Common\Constants
  */
 class ColumnType extends Constant
 {

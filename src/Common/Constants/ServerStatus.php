@@ -5,13 +5,13 @@
  * Date: 2019/11/19
  * Time: 10:43
  */
-namespace Src\Common\Constants;
+namespace PMysql\Common\Constants;
 
 /**
  * server status
  * @see https://dev.mysql.com/doc/internals/en/status-flags.html
  * Class ServerStatus
- * @package Src\Common\Constants
+ * @package PMysql\Common\Constants
  */
 class ServerStatus extends Constant
 {

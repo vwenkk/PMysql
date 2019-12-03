@@ -5,14 +5,14 @@
  * Date: 2019/11/15
  * Time: 23:16
  */
-namespace Src\Exception\Base;
+namespace PMysql\Exception\Base;
 
 use PHPUnit\Framework\MockObject\RuntimeException;
-use Src\Exception\Mapping\BizErrCodeMsgMapping;
+use PMysql\Exception\Mapping\BizErrCodeMsgMapping;
 
 /**
  * Class BaseException
- * @package Src\Exception\Base
+ * @package PMysql\Exception\Base
  */
 abstract class BaseException extends RuntimeException
 {

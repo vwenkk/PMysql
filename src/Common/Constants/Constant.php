@@ -6,11 +6,11 @@
  * Time: 10:44
  */
 
-namespace Src\Common\Constants;
+namespace PMysql\Common\Constants;
 
 /**
  * Class Constant
- * @package Src\Common\Constants
+ * @package PMysql\Common\Constants
  */
 abstract class Constant
 {

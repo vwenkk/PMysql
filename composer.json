@@ -1,5 +1,5 @@
 {
-    "name": "wenkang/mysqldriver",
+    "name": "wenkang/pmysql",
     "type": "library",
     "license": "MIT",
     "authors": [
