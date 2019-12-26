@@ -8,7 +8,7 @@
 
 namespace PMysql\Constracts\Transaction;
 
-use PMysql\Constracts\Connect\Connection;
+use PMysql\Constracts\Connection\Connection;
 
 abstract class Transaction
 {

@@ -8,8 +8,6 @@
 
 namespace PMysql\Exception\Base;
 
-use Monolog\Logger;
-
 /**
  * Class ErrorMapBase
  * @package PMysql\Exception\Base
@@ -41,14 +39,10 @@ abstract class ErrorMapBase
         $errMap = $this->getErrMsgMapping();
         if (isset($errMap[$errno])) {
             $tmp_error_content = $errMap[$errno];
-            /**
-             * fixbug: 支持中文展示
-             */
             $strParams = empty($params) ? '' : json_encode($params, JSON_UNESCAPED_UNICODE);
             $tmp_error_content = strlen($strParams) > 0 ? $tmp_error_content.':'.$strParams : $tmp_error_content;
             return $tmp_error_content;
         } else {
-            Logger::warning('Not Found Errno Map Msg...');
             return '';
         }
     }

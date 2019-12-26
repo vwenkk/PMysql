@@ -10,7 +10,7 @@ namespace PMysql\Protocol\Packets;
 
 class HandshakePacket extends Packet
 {
-    public function readPacket()
+    public function readPacket($data)
     {
         // TODO: Implement readPacket() method.
     }

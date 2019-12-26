@@ -14,9 +14,10 @@ namespace PMysql\Protocol\Packets;
 abstract class Packet
 {
     /**
+     * @param $data
      * @return mixed
      */
-    abstract public function readPacket();
+    abstract public function readPacket($data);
 
     /**
      * @return mixed

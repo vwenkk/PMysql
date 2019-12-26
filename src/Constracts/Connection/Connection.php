@@ -6,7 +6,7 @@
  * Time: 20:55
  */
 
-namespace PMysql\Constracts\Connect;
+namespace PMysql\Constracts\Connection;
 
 use PMysql\Constracts\Transaction\Transaction;
 
@@ -21,12 +21,6 @@ abstract class Connection
      * @return mixed
      */
     abstract public function exec(string $sql);
-
-    /**
-     * @param string $sql
-     * @return mixed
-     */
-    abstract public function query(string $sql);
 
     /**
      * 开启事务
@@ -44,4 +38,17 @@ abstract class Connection
      * @return mixed
      */
     abstract public function ping();
+
+    /**
+     * 发送 packet
+     * @return mixed
+     */
+    abstract public function send($data);
+
+
+    /**
+     * read 发送过来的消息
+     * @return mixed
+     */
+    abstract public function read();
 }

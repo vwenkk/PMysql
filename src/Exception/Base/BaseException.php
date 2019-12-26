@@ -7,19 +7,39 @@
  */
 namespace PMysql\Exception\Base;
 
-use PHPUnit\Framework\MockObject\RuntimeException;
 use PMysql\Exception\Mapping\BizErrCodeMsgMapping;
 
 /**
  * Class BaseException
  * @package PMysql\Exception\Base
  */
-abstract class BaseException extends RuntimeException
+abstract class BaseException extends \RuntimeException
 {
     /**
      * @var BizErrCodeMsgMapping
      */
     protected $errMapInstance = null;
+
+
+    /**
+     * BaseException constructor.
+     * @param int $errno
+     * @param string $context
+     * @param \Exception|null $previous
+     * @throws \Exception
+     */
+    public function __construct(int $errno, $context = '', \Exception $previous = null)
+    {
+        if ($this->validateErrorCode($errno)) {
+            $formatMessage = $this->getErrorMsg($errno, $context);
+            if (empty($formatMessage)) {
+                $formatMessage = $context;
+            }
+            parent::__construct($formatMessage, $errno, $previous);
+        } else {
+            throw new \Exception('构造Exception失败，因为传入的Code不正确:', var_export($errno, false), $this->getPrevious());
+        }
+    }
 
     /**
      * @return int
