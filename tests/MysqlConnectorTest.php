@@ -17,7 +17,7 @@ class MysqlConnectorTest extends TestCase
     public function testConnect()
     {
         $parameters = new Parameters([
-            'host' => '192.168.1.90',
+            'host' => '192.168.1.8',
         ]);
         $mysqlConnector = new MysqlConnector($parameters);
         $mysqlConnector->connect();

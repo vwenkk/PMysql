@@ -14,6 +14,16 @@ namespace PMysql\Protocol\Packets;
 abstract class Packet
 {
     /**
+     * @var int
+     */
+    protected $packetLength;
+
+    /**
+     * @var int
+     */
+    protected $packetId;
+
+    /**
      * @param $data
      * @return mixed
      */

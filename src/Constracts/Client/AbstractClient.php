@@ -9,6 +9,7 @@
 namespace PMysql\Constracts\Client;
 
 use MongoDB\Driver\Exception\ConnectionException;
+use PMysql\Common\Helper;
 use PMysql\Constracts\Parameters\ParametersInterface;
 use PMysql\Exception\Biz\ClientException;
 use PMysql\Exception\Mapping\BizErrCodeMsgMapping;
@@ -103,6 +104,7 @@ abstract class AbstractClient implements ClientInterface
         while (!feof($socket)) {
             $contents .= fread($socket, 3);
         }
+
         return $contents;
     }
     /**
@@ -110,7 +112,11 @@ abstract class AbstractClient implements ClientInterface
      */
     public function response()
     {
-        return $this->read();
+        $contents = $this->read();
+        /**
+         * string to bytes
+         */
+        return Helper::stringToBytes($contents);
     }
 
     /**

@@ -36,6 +36,7 @@ class MysqlConnector extends Connector
         $data = $streamClient->response();
         $handshakePacket = new HandshakePacket();
         $handshakePacket->readPacket($data);
+
         $mysqlConnection = new MysqlConnection($streamClient);
     }
 }
